@@ -15,9 +15,15 @@ def test_that_modifies_env() -> None:
     os.environ['CUSTOM_ENV'] = '1'
 ```
 
-With `pytest-modified-env` plugin installed, this test will fail.
-Because it adds `CUSTOM_ENV` inside a test and does not clean it up.
+With `pytest-modified-env` plugin installed, this test will fail:
 
+```
+___________________________ test_that_modifies_env ____________________________
+test_that_modifies_env:4: in pytest_runtest_call
+E   RuntimeError: os.environ was changed
+```
+
+Because it adds `CUSTOM_ENV` inside a test and does not clean it up.
 In theory it can affect other tests and tests should be isolated!
 
 

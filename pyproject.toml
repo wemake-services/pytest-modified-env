@@ -13,16 +13,28 @@ description = "Pytest plugin to fail a test if it leaves modified `os.environ` a
 version = "0.1.0"
 license = "MIT"
 
-authors = []
+authors = [
+  "Nikita Sobolev <mail@sobolevn.me>"
+]
 
 readme = "README.md"
 
 repository = "https://github.com/wemake-services/pytest-modified-env"
 
-keywords = []
+keywords = [
+  "pytest",
+  "pytest-plugin",
+  "os.environ",
+  "testing",
+  "unittest",
+  "tests",
+  "test",
+  "unit tests",
+  "code quality",
+]
 
 classifiers = [
-  "Development Status :: 3 - Alpha",
+  "Development Status :: 4 - Beta",
   "Intended Audience :: Developers",
   "Operating System :: OS Independent",
   "Topic :: Software Development :: Libraries :: Python Modules",

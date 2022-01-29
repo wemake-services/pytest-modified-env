@@ -23,7 +23,7 @@ def test_allowed() -> None:
     os.environ['MARKER_ENV'] = '1'
 
 
-@pytest.mark.xfail(reason='Env is modified')
+
 def test_expected_to_fail() -> None:
     """
     This test modifies the env.
