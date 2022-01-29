@@ -1,7 +1,6 @@
 # pytest-modified-env
 
 [![Build Status](https://github.com/wemake-services/pytest-modified-env/workflows/test/badge.svg?branch=master&event=push)](https://github.com/wemake-services/pytest-modified-env/actions?query=workflow%3Atest)
-[![codecov](https://codecov.io/gh/wemake-services/pytest-modified-env/branch/master/graph/badge.svg)](https://codecov.io/gh/wemake-services/pytest-modified-env)
 [![Python Version](https://img.shields.io/pypi/pyversions/pytest-modified-env.svg)](https://pypi.org/project/pytest-modified-env/)
 [![wemake-python-styleguide](https://img.shields.io/badge/style-wemake-000000.svg)](https://github.com/wemake-services/wemake-python-styleguide)
 
