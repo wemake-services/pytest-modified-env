@@ -1,0 +1,50 @@
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.nitpick]
+style = "https://raw.githubusercontent.com/wemake-services/wemake-python-styleguide/master/styles/nitpick-style-wemake.toml"
+
+
+[tool.poetry]
+name = "pytest-modified-env"
+description = "Pytest plugin to fail a test if it leaves modified `os.environ` afterwards."
+version = "0.1.0"
+license = "MIT"
+
+authors = []
+
+readme = "README.md"
+
+repository = "https://github.com/wemake-services/pytest-modified-env"
+
+keywords = []
+
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Operating System :: OS Independent",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+[tool.poetry.urls]
+"Funding" = "https://github.com/sponsors/wemake-services"
+
+[tool.poetry.plugins.pytest11]
+pytest_modified_env = "pytest_modified_env.plugin"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+
+[tool.poetry.dev-dependencies]
+mypy = "^0.931"
+
+wemake-python-styleguide = "^0.16"
+flake8-pytest-style = "^1.6"
+nitpick = "^0.31"
+
+safety = "^1.10"
+
+pytest = "^6.2"
+pytest-randomly = "^3.11"
