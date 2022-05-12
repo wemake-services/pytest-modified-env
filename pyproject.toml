@@ -59,4 +59,4 @@ nitpick = "^0.31"
 safety = "^1.10"
 
 pytest = "^6.2"
-pytest-randomly = "^3.11"
+pytest-randomly = "^3.12"
