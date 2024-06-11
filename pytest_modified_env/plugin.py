@@ -2,10 +2,9 @@ import os
 from typing import Iterator, Mapping
 
 import pytest
-from _pytest import config, nodes  # noqa: WPS436
 
 
-def pytest_configure(config: config.Config) -> None:  # noqa: WPS442
+def pytest_configure(config: pytest.Config) -> None:
     """
     Hook to be executed on import.
 
@@ -20,12 +19,14 @@ def pytest_configure(config: config.Config) -> None:  # noqa: WPS442
     )
 
 
-@pytest.hookimpl(hookwrapper=True, tryfirst=True)  # noqa: WPS110
-def pytest_runtest_call(item: nodes.Item) -> Iterator[None]:  # noqa: WPS110
+@pytest.hookimpl(hookwrapper=True, tryfirst=True)
+def pytest_runtest_call(
+    item: pytest.Item,  # noqa: WPS110
+) -> Iterator[None]:
     """
     Custom pytest hook implementation that fires for all tests before they run.
 
-    Docs: https://docs.pytest.org/en/6.2.x/reference.html
+    Docs: https://docs.pytest.org/en/8.2.x/reference.html
     See: _pytest.hookspec.pytest_runtest_call
     """
     if item.get_closest_marker('modify_env'):

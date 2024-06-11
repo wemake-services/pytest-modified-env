@@ -17,7 +17,7 @@ def test_cleans_up_env() -> None:
     os.environ.pop('NEW_ENV')
 
 
-@pytest.mark.modify_env()
+@pytest.mark.modify_env
 def test_allowed() -> None:
     """It has a marker."""
     os.environ['MARKER_ENV'] = '1'
